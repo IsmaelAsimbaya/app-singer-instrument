@@ -30,8 +30,11 @@
           maxAge="3600" />
     <ssl id="defaultSSLConfig" trustDefaultCerts="true" />
 
+    <variable name="system.jdbc.dir"
+              defaultValue="C:/HardDisk/Biblioteca/Workspaces/InteliJ/app-singer/src/main/resources/libs" />
+
     <library id="PostgreSQLLib">
-        <fileset dir="C:/HardDisk/Biblioteca/Workspaces/InteliJ/app-singer-instrument/src/main/resources/libs" includes="postgresql-42.6.0.jar"/>
+        <fileset dir="${system.jdbc.dir}" includes="postgresql-42.6.0.jar"/>
     </library>
 
     <dataSource jndiName="jdbc/pgDataSource" transactional="true">
